@@ -1,4 +1,4 @@
-@extends("layout.main")
+@extends("mod7.main")
 @section('title', 'AdminLTE')
 
 @section('page-title', 'Halaman Hello World')
