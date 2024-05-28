@@ -39,6 +39,8 @@ Route::get('/mastermk', [MasterController::class, 'mastermk']);
 Route::get('/masterkelas', [MasterController::class, 'masterkelas']);
 Route::get('/masterdosen', [MasterController::class, 'masterdosen']);
 
+Route::post('/submitmhs', [MasterController::class, 'submitMahasiswa']);
+
 Route::get('/jdwlkuliah', [PerkuliahanController::class, 'jadwalkuliah']);
 Route::get('/jdwlujian', [PerkuliahanController::class, 'jadwalujian']);
 Route::get('/absenmhs', [PerkuliahanController::class, 'absenmahasiswa']);

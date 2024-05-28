@@ -10,6 +10,11 @@ class MasterController extends Controller
     public function mastermahasiswa(){
         $sb_menu = "mahasiswa";
         $sb_submenu = "mastermahasiswa";
+
+        if(!session()->has('mahasiswa')){
+            session()->put('mahasiswa', array());
+        }
+
         return view('master.mastermahasiswa', compact('sb_menu', 'sb_submenu'));
     }
     public function mastermk(){
@@ -26,5 +31,15 @@ class MasterController extends Controller
         $sb_menu = "mahasiswa";
         $sb_submenu = "masterdosen";
         return view('master.masterdosen', compact('sb_menu', 'sb_submenu'));
+    }
+
+    public function submitMahasiswa(Request $req){
+        session()->push('mahasiswa', array(
+            'nama' => $req -> post('nama'),
+            'nim' => $req -> post('nim')
+        ));
+        session()->flash('notif', 'Data Berhasil Disimpan!');
+
+        return redirect('/mastermhs');
     }
 }
