@@ -8,7 +8,7 @@
     <li class="breadcrumb-item">Master Mahasiswa</li>
 @endsection
 
-@section('extra-css')
+@section('page-css')
     <!-- Toastr -->
     <link rel="stylesheet" href="{{ asset('/plugins/toastr/toastr.min.css') }}">
 @endsection
@@ -55,7 +55,7 @@
                 <tbody>
                     @foreach(session('mahasiswa', []) as $mhs)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $loop->index+1 }}</td>
                             <td>{{ $mhs['nama'] }}</td>
                             <td>{{ $mhs['nim'] }}</td>
                         </tr>

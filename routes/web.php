@@ -40,6 +40,9 @@ Route::get('/masterkelas', [MasterController::class, 'masterkelas']);
 Route::get('/masterdosen', [MasterController::class, 'masterdosen']);
 
 Route::post('/submitmhs', [MasterController::class, 'submitMahasiswa']);
+Route::post('/submitdsn', [MasterController::class, 'submitDosen']);
+Route::post('/submitkls', [MasterController::class, 'submitKelas']);
+Route::post('/submitmk', [MasterController::class, 'submitMK']);
 
 Route::get('/jdwlkuliah', [PerkuliahanController::class, 'jadwalkuliah']);
 Route::get('/jdwlujian', [PerkuliahanController::class, 'jadwalujian']);
